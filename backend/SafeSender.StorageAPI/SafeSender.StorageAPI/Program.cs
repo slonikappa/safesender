@@ -27,6 +27,19 @@ builder.Services.AddSwaggerGen();
 //     options.IncludeXmlComments(comments);
 // });
 
+const string corsPolicyAcceptAllName = "AcceptAll";
+
+// Add Cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(corsPolicyAcceptAllName,
+        builder => builder
+            .SetIsOriginAllowed(host => true)
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials());
+});
+
 var storageSettingsSection = builder.Configuration.GetSection(StorageOptions.SettingsPath);
 
 // Options registration
@@ -60,6 +73,8 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
+
+app.UseCors(corsPolicyAcceptAllName);
 
 app.MapGet("api/download/{token}", async (
         [Required] string token,
