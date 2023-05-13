@@ -13,4 +13,6 @@ Overall, SafeSender is a powerful and user-friendly file-sharing platform that p
 
 https://www.figma.com/file/VU5zOhAY2JeWu3FVEGwQ2a/SafeSender?node-id=1-12&t=pXWGtR4j65w9R2c4-4
 
+# Archived
+### New fork: [SafeSenderApp](https://github.com/slonikappa/safesender-app)
 
