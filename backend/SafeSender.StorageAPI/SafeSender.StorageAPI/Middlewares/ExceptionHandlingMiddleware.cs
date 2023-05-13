@@ -1,6 +1,10 @@
+using System.Diagnostics;
 using System.Net;
+using System.Text;
 using System.Text.Json;
 using AnonFilesApi.Exceptions;
+using Microsoft.Extensions.Primitives;
+using MongoDB.Bson;
 using SafeSender.StorageAPI.Extensions;
 
 namespace SafeSender.StorageAPI.Middlewares;
@@ -20,6 +24,31 @@ public class ExceptionHandlingMiddleware
     {
         try
         {
+            var sb = new StringBuilder();
+            sb.Append("Headers");
+            foreach(var header in httpContext.Request.Headers)
+            {
+                
+                sb.Append($"{header.Key}: {header.Value}");
+            }
+        
+            _logger.LogInformation("Header: {HeadersList}", sb.ToString());
+            sb.Clear();
+            sb.Append("Cookies");
+            foreach(var cookie in httpContext.Request.Cookies)
+            {
+                sb.Append($"Cookie Key: {cookie.Key} Cookie value: {cookie.Value}");
+            }
+        
+            _logger.LogInformation("Cookie: {CookiesList}", sb.ToString());
+            sb.Clear();
+            
+            using (var reader = new StreamReader(httpContext.Request.Body))
+            {
+                var body = await reader.ReadToEndAsync();
+                _logger.LogInformation("Received body: {Body}", body);
+            }
+            
             await _next(httpContext);
         }
         catch (FileNotFoundException ex)
