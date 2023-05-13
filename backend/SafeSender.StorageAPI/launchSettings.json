@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "mongo-data": "StartWithoutDebugging",
+        "safe-sender-storage-api": "StartDebugging"
+      }
+    }
+  }
+}

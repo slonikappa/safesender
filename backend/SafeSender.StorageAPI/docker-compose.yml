@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  mongo-data:
+    container_name: mongo-data
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - safe-sender-mongodb-data:/data/db
+    external_links:
+      - "mongo-data"
+  
+  safe-sender-storage-api:
+    build:
+      context: .
+      dockerfile: SafeSender.StorageAPI/Dockerfile
+    ports:
+      - "5006:80"
+      - "5007:443"
+    external_links:
+      - "safe-sender-storage-api"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - mongo-data
+
+volumes:
+  safe-sender-mongodb-data:

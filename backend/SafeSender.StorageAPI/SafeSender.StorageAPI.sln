@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafeSender.StorageAPI", "SafeSender.StorageAPI\SafeSender.StorageAPI.csproj", "{C66E3065-C5FF-4041-9CDB-3E0347D4FE5E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CADFF696-2196-43F3-8291-8B825E44CF36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafeSender.StorageAPI.Tests", "SafeSender.StorageAPI.Tests\SafeSender.StorageAPI.Tests.csproj", "{1FB16CC2-584D-4DB7-B7FA-4628BD3B1F4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C66E3065-C5FF-4041-9CDB-3E0347D4FE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66E3065-C5FF-4041-9CDB-3E0347D4FE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66E3065-C5FF-4041-9CDB-3E0347D4FE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66E3065-C5FF-4041-9CDB-3E0347D4FE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CADFF696-2196-43F3-8291-8B825E44CF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADFF696-2196-43F3-8291-8B825E44CF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADFF696-2196-43F3-8291-8B825E44CF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADFF696-2196-43F3-8291-8B825E44CF36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB16CC2-584D-4DB7-B7FA-4628BD3B1F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB16CC2-584D-4DB7-B7FA-4628BD3B1F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB16CC2-584D-4DB7-B7FA-4628BD3B1F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB16CC2-584D-4DB7-B7FA-4628BD3B1F4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C891CBF4-0A7D-4A2C-9A72-E9DCF3339B3E}
+	EndGlobalSection
+EndGlobal

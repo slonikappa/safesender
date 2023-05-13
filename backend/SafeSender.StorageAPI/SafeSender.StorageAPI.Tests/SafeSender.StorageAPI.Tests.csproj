@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="UnitTests\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentAssertions" Version="6.11.0" />
+      <PackageReference Include="Flurl.Http" Version="3.2.4" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.16" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+      <PackageReference Include="NUnit" Version="3.13.3" />
+      <PackageReference Include="NUnit.ConsoleRunner" Version="3.16.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SafeSender.StorageAPI\SafeSender.StorageAPI.csproj" />
+    </ItemGroup>
+
+</Project>
